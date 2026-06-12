@@ -1,0 +1,38 @@
+# Personalized Education Matrix — Default Configuration
+
+ocn:
+  environment: development
+  log_level: INFO
+
+profile:
+  default_expertise_level: beginner  # beginner | intermediate | advanced | expert
+  cognitive_styles: [visual, textual, interactive, auditory]
+  history_retention_days: 365
+
+curriculum:
+  max_path_length: 100
+  adaptation_trigger: progress_update  # progress_update | scheduled | manual
+  discovery_feed_enabled: true
+  kgu_endpoint: http://localhost:8080/kgu/v1
+  csf_endpoint: http://localhost:8081/csf/v1
+  ade_endpoint: http://localhost:8083/ade/v1
+  utc_endpoint: http://localhost:8082/utc/v1
+
+delivery:
+  default_language: en
+  default_format: markdown
+  max_unit_length_tokens: 2000
+
+progress:
+  mastery_threshold: 0.85
+  feedback_loop_enabled: true
+
+assessment:
+  default_question_count: 10
+  adaptive_difficulty: true
+
+api:
+  host: 0.0.0.0
+  port: 8084
+  workers: 4
+  auth_required: true
